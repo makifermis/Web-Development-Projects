@@ -1,14 +1,14 @@
 var gamePattern = []
 var buttonColours = ["red", "blue", "green", "yellow"]
-var randomNumber
+
 function nextSequence(){
-    randomNumber = Math.floor((Math.random() * 3)+1)
-    //console.log(randomNumber)
+    var randomNumber = Math.floor(Math.random() * 4)
+    return randomNumber
 }
 
-var randomChosenColour = buttonColours[randomNumber]
+var randomChosenColour = buttonColours[nextSequence()]
 
 gamePattern.push(randomChosenColour)
 
-$("#"+randomChosenColour).fadeOut(100).fadeIn(100)
+$('#'+randomChosenColour).fadeOut(100).fadeIn(100)
 
